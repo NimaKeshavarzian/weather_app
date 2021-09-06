@@ -50,6 +50,7 @@ export default {
 :root {
   --primaryColor: #fff;
   --bgColor: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%);
+  --errorTxtColor: #444E72;
 }
 * {
   font-family: 'Overpass';
