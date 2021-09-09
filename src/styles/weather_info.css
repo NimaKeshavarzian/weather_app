@@ -1,0 +1,85 @@
+#weather {
+    width: 85%;
+    height: auto;
+    position: relative;
+    bottom: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 18px;
+    box-shadow: 1px 1px 2px rgb(213 213 213);
+}
+
+#date {
+    font: normal 1.2rem "Overpass";
+    text-shadow: -1.85429px 2.78143px 0.927143px rgba(0, 0, 0, 0.1);
+}
+
+#temp {
+    margin-top: -0.6rem;
+    font: normal 5em "Overpass";
+    padding-left: 0.3em;
+    text-shadow: -3.70857px 7.41714px 46.3571px rgba(0, 0, 0, 0.1);
+}
+
+#desc {
+    font: normal 1.5rem "Overpass";
+    margin-top: -3rem;
+}
+
+#weatherInfo ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#weatherInfo li {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75em;
+    font: normal 1.4rem "Overpass";
+}
+
+.infoTitle,
+.infoValue {
+    margin-left: 1em;
+    text-align: center;
+}
+
+.infoValue {
+    display: block;
+}
+
+#more {
+    width: 100%;
+    cursor: pointer;
+}
+
+#more img {
+    width: 100%;
+}
+
+#details {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#weatherInfo #details li {
+    grid-template-columns: 1fr 4fr 1fr;
+}

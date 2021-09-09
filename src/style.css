@@ -1,0 +1,52 @@
+@import url("./styles/header.css");
+@import url("./styles/weather_icon_status.css");
+@import url("./styles/weather_info.css");
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+
+/* colors */
+
+:root {
+    --primaryColor: #fff;
+    --bgColor: linear-gradient(192.05deg, #47bfdf, #4a91ff);
+    --errorTxtColor: #444e72;
+}
+
+* {
+    font-family: "Overpass";
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--bgColor);
+    color: var(--primaryColor);
+    overflow-x: hidden;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    -ms-flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.showAnimation {
+    animation: show 0.6s linear;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
