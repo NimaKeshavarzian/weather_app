@@ -113,8 +113,7 @@ export default {
           desc: null,
           icon: null
         },
-        windSpeed: null,
-        hasError: false
+        windSpeed: null
       },
       showDetails: false
     };
@@ -127,17 +126,20 @@ export default {
       fetch(apiUrl)
         .then(res => res.json())
         .then(data => {
-          this.output.main.temp = Math.round(data.main.temp);
-          this.output.main.feelsLike = Math.round(data.main.feels_like);
-          this.output.main.min = Math.round(data.main.temp_min);
-          this.output.main.max = Math.round(data.main.temp_max);
-          this.output.weatherDetails.desc = data.weather[0].description;
-          this.output.windSpeed = Math.round(data.wind.speed);
-          this.output.main.humidity = Math.round(data.main.humidity);
-          // Send Icon
-          this.$emit("icon", data.weather[0].icon);
-        })
-        .catch(err => console.error(err));
+            this.output.main.temp = Math.round(data.main.temp);
+            this.output.main.feelsLike = Math.round(data.main.feels_like);
+            this.output.main.min = Math.round(data.main.temp_min);
+            this.output.main.max = Math.round(data.main.temp_max);
+            this.output.weatherDetails.desc = data.weather[0].description;
+            this.output.windSpeed = Math.round(data.wind.speed);
+            this.output.main.humidity = Math.round(data.main.humidity);
+            // Send Icon
+            this.$emit("icon", data.weather[0].icon)
+            eventBus.$emit("isValidCity", true)
+        }).catch((err) => {
+          console.warn(err);
+          eventBus.$emit("isValidCity", false)
+        });
     }
   },
   computed: {

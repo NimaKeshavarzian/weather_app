@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <page-header :hasErr="api.hasError"></page-header>
+    <page-header></page-header>
     <div id="weatherIconContainer">
       <img
         :src="api.iconUrl"
@@ -9,7 +9,7 @@
         height="250"
       />
     </div>
-    <weather :apiData="api" @hasError="this.api.hasError = $event" @icon="changeIcon($event)"></weather>
+    <weather :apiData="api" @icon="changeIcon($event)"></weather>
   </div>
 </template>
 
@@ -26,8 +26,8 @@ export default {
         url: `https://api.openweathermap.org/data/2.5/weather`,
         baseIconUrl: "http://openweathermap.org/img/wn/",
         iconUrl: "",
-        hasError: false
-      }
+      },
+      isValidCity: false
     };
   },
   methods: {
