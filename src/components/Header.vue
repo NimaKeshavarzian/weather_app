@@ -13,7 +13,7 @@
         v-model="location"
         @change="locationChanged"
     />
-    <span id="errorLog" v-if="hasErr">Please enter a valid location.</span></label>
+    <span id="errorLog" v-if="!validCity">Please enter a valid location.</span></label>
   </header>
 </template>
 
@@ -21,24 +21,20 @@
 import {eventBus} from '../main'
 
 export default {
-  props: {
-    hasErr: {
-      type: Boolean,
-      default: false
-    }
-  },
   data() {
     return {
-      location: "Tehran"
+      location: "Tehran",
+      validCity: true
     };
   },
   methods: {
     locationChanged() {
-      eventBus.$emit("location", this.location);
+    eventBus.$emit("location", this.location);
+    eventBus.$on("isValidCity", isValidCity => this.validCity = isValidCity)
     }
   },
   created() {
-    eventBus.$on("inputLocation", (inputLocation) => this.location = inputLocation)
+    eventBus.$on("inputLocation", inputLocation => this.location = inputLocation)
   }
 };
 </script>
