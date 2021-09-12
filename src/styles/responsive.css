@@ -33,6 +33,10 @@
 }
 
 @media screen and (min-width: 850px) {
+    /* Responsive Header */
+    #pageHeader {
+        padding-left: 4.75em;
+    }
     /* Responsive weather data */
     #date {
         font-size: 1rem;
@@ -48,6 +52,14 @@
     }
     #weatherInfo li {
         font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /* Responsive Header */
+    #pageHeader {
+        text-align: center;
+        margin-bottom: 2em;
     }
 }
 
