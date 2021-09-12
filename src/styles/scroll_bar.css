@@ -1,0 +1,10 @@
+::-webkit-scrollbar {
+    width: 1em;
+    background: var(--bgColor);
+    box-shadow: inset 2px 2px 10px var(--errorTxtColor), inset -2px -2px 10px var(--errorTxtColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--errorTxtColor);
+    border-radius: 30px;
+}
