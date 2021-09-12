@@ -1,10 +1,8 @@
 #pageHeader {
     width: 100%;
     height: auto;
-    position: sticky;
-    top: 0;
-    left: 0;
     padding: 1.3em 0.3em 0;
+    z-index: 1;
 }
 
 #inputLocationContainer {

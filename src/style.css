@@ -1,6 +1,8 @@
 @import url("./styles/header.css");
 @import url("./styles/weather_icon_status.css");
 @import url("./styles/weather_info.css");
+@import url("./styles/responsive.css");
+@import url("./styles//scroll_bar.css");
 
 /* Fonts */
 
@@ -24,6 +26,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     background: var(--bgColor);
+    background-attachment: fixed;
     color: var(--primaryColor);
     overflow-x: hidden;
 }
