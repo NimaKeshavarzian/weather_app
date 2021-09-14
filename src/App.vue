@@ -5,14 +5,7 @@
     <!-- Get location -->
     <page-header></page-header>
     <!-- Weather status Icon -->
-    <div id="weatherIconContainer">
-      <img
-        :src="api.iconUrl"
-        alt="Weather"
-        width="250"
-        height="250"
-      />
-    </div>
+    <weather-status-icon :iconUrl="api.iconUrl"></weather-status-icon>
     <!-- Weather -->
     <weather :apiData="api" @icon="changeIcon($event)"></weather>
   </div>
@@ -21,6 +14,7 @@
 <script>
 import Loader from "./components/loader.vue"; // loader
 import Header from "./components/Header.vue"; // get location
+import Weather_Status_Icon from "./components/weather_status_icon.vue"; // weather status icon
 import Weather_data from "./components/Weather_Data.vue"; // get data
 
 export default {
@@ -44,7 +38,8 @@ export default {
   },
   components: {
     loader: Loader, // loader
-    pageHeader: Header, // get location
+    pageHeader: Header, // get location,
+    weatherStatusIcon: Weather_Status_Icon, // Weather status icon
     weather: Weather_data // get data
   },
   created() {
