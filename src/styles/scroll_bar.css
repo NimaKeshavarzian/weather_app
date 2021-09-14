@@ -1,3 +1,4 @@
+@media screen and (min-width: 500px) and (min-height:500px) {
 ::-webkit-scrollbar {
     width: 1em;
     background: var(--bgColor);
@@ -7,4 +8,5 @@
 ::-webkit-scrollbar-thumb {
     background: var(--errorTxtColor);
     border-radius: 30px;
+}
 }
